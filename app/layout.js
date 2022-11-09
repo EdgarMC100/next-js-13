@@ -1,10 +1,14 @@
+import { spaceGrotesk } from "./font";
 import Header from "../components/Header";
 import "../styles/globals.css";
+
 export default function RootLayout({ children }) {
   return (
     <html>
-      <head></head>
-      <body>
+      <head>
+        <title>HEAD</title>
+      </head>
+      <body className={spaceGrotesk.className}>
         <Header />
         {children}
       </body>
