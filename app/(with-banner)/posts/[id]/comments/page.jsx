@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const fetchComments = async (id) => {
   await new Promise((resolve) => setTimeout(resolve, 3000));
@@ -20,6 +21,12 @@ export default async function Comments({ params }) {
         comments.map(({ name, email, body }) => (
           <>
             <h2>{name}</h2>
+            <Image
+              width={100}
+              height={100}
+              src={`https://avatars.dicebear.com/api/adventurer/${name}.svg`}
+              alt={`${name}`}
+            />
             <address>
               <a href={`mailto:${email}`}>{name}</a>
             </address>

@@ -8,7 +8,7 @@ export default function RootLayout({ children }) {
       <head>
         <title>HEAD</title>
       </head>
-      <body className={spaceGrotesk.className}>
+      <body className={spaceGrotesk.variable}>
         <Header />
         {children}
       </body>
